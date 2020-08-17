@@ -9,7 +9,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-redux": "^7.2.1",
+    "react-scripts": "3.4.3",
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +33,25 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.6.1"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rammazzoti2000/bookstore-react.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "js"
+  ],
+  "author": "Alexandru Bangau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rammazzoti2000/bookstore-react/issues"
+  },
+  "homepage": "https://github.com/rammazzoti2000/bookstore-react#readme"
 }
