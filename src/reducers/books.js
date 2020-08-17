@@ -5,11 +5,18 @@ const bookReducer = (state = [], action) => {
     case CREATE_BOOK:
       return [
         ...state,
-        action.book,
+        {
+          id: action.book.id,
+          title: action.book.title,
+          category: action.category,
+        },
       ];
 
     case REMOVE_BOOK:
-      return state.filter(book => action.book.id !== book.id);
+      return [
+        ...state.slice(0, action.book.index),
+        ...state.slice(action.book.index + 1, state.length),
+      ];
 
     default:
       return state;
