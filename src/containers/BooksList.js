@@ -20,16 +20,12 @@ const BooksList = ({ books }) => (
   </div>
 );
 
-BooksList.defaultProps = {
-  books: null,
-};
-
 const mapStateToProps = state => ({
   books: state.books,
 });
 
 BooksList.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.object.isRequired),
+  books: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default connect(mapStateToProps)(BooksList);
