@@ -10,8 +10,8 @@ const bookStore = (state = [], action) => {
 
     case REMOVE_BOOK:
       return [
-        ...state.slice(0, action.id),
-        ...state.slice(action.id + 1, state.length),
+        ...state.slice(0, action.book),
+        ...state.slice(action.book + 1, state.length),
       ];
 
     default:
