@@ -26,7 +26,7 @@
     <img src="src/readmePics/microverse.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">ReactJs --> [Calculator App]</h3>
+  <h3 align="center">ReactJs --> [BookStore App]</h3>
 
   <p align="center">
     This project is part of the Microverse curriculum in React module!
