@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
+import { generateID } from '../sampleBookObject';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 const dropdownMenu = categories.map(category => (
@@ -14,7 +15,7 @@ class BooksForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: Math.floor(Math.random() * 1000),
+      id: generateID(),
       title: '',
       category: categories[0],
     };
@@ -42,7 +43,7 @@ class BooksForm extends React.Component {
 
   reset() {
     this.setState({
-      id: Math.ceil(Math.random() * 1000),
+      id: generateID(),
       title: '',
       category: categories[0],
     });
