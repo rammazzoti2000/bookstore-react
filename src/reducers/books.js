@@ -1,17 +1,19 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
-
-const bookReducer = (state = [], action) => {
+const bookStore = (state = [], action) => {
   switch (action.type) {
-    case CREATE_BOOK:
+    case 'CREATE_BOOK':
       return [
         ...state,
-        action.book,
+        {
+          id: action.book.id,
+          title: action.book.title,
+          category: action.book.category,
+        },
       ];
 
-    case REMOVE_BOOK:
+    case 'REMOVE_BOOK':
       return [
-        ...state.slice(0, action.book.index),
-        ...state.slice(action.book.index + 1, state.length),
+        ...state.slice(0, action.bookIndex),
+        ...state.slice(action.bookIndex + 1, state.length),
       ];
 
     default:
@@ -19,4 +21,4 @@ const bookReducer = (state = [], action) => {
   }
 };
 
-export default bookReducer;
+export default bookStore;

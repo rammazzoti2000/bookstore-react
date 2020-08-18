@@ -5,6 +5,7 @@ import { createBook } from '../actions/index';
 import { generateID } from '../sampleBookObject';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+
 const dropdownMenu = categories.map(category => (
   <option key={category} value={category}>
     {category}
