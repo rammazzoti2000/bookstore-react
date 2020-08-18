@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createBook } from '../actions/index';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 const dropdownMenu = categories.map(category => (
@@ -12,6 +14,7 @@ class BooksForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: Math.floor(Math.random() * 1000),
       title: '',
       category: categories[0],
     };
@@ -33,31 +36,52 @@ class BooksForm extends React.Component {
     e.preventDefault();
     if (title) {
       createBook(this.state);
+      this.reset();
     }
   }
 
+  reset() {
+    this.setState({
+      id: Math.ceil(Math.random() * 1000),
+      title: '',
+      category: categories[0],
+    });
+  }
+
   render() {
+    const { title, category } = this.state;
     return (
-      <div>
-        <form className="main-form">
-          <label htmlFor="book-title">
-            Book Title:
-            <input
-              type="text"
-              id="book-title"
-              placeholder="Enter Book Title"
-              required
-            />
-          </label>
-          <label htmlFor="book-category">
-            Book Category:
-            <select id="book-category">
-              { dropdownMenu }
-            </select>
-          </label>
-          <button type="submit" className="submit">Add New Book</button>
-        </form>
-      </div>
+      <form className="main-form" onSubmit={this.handleSubmit}>
+        <label htmlFor="title">
+          Book Title:
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter Book Title"
+            value={title}
+            onChange={this.handleChange}
+            required
+          />
+        </label>
+        <label htmlFor="category">
+          Book Category:
+          <select
+            id="category"
+            name="category"
+            onChange={this.handleChange}
+            value={category}
+          >
+            { dropdownMenu }
+          </select>
+        </label>
+        <button
+          type="submit"
+          className="submit"
+        >
+          Add New Book
+        </button>
+      </form>
     );
   }
 }
@@ -66,4 +90,10 @@ BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
-export default BooksForm;
+const mapDispatchToProps = dispatch => ({
+  createBook: book => {
+    dispatch(createBook(book));
+  },
+});
+
+export default connect(null, mapDispatchToProps)(BooksForm);
