@@ -12,8 +12,17 @@ class BooksForm extends React.Component {
     super(props);
     this.state = {
       title: '',
-      category: 'Action',
+      category: categories[0],
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    if (e.target.name === 'title') {
+      this.setState({ title: e.target.value });
+    } else if (e.target.name === 'category') {
+      this.setState({ category: e.target.value });
+    }
   }
 
   render() {
