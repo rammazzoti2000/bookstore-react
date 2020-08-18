@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 const dropdownMenu = categories.map(category => (
@@ -60,5 +61,9 @@ class BooksForm extends React.Component {
     );
   }
 }
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
 
 export default BooksForm;
