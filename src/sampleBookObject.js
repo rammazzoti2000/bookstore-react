@@ -14,7 +14,7 @@ export default {
     },
     {
       id: generateID(),
-      title: 'Portrait of the Artis',
+      title: 'Portrait of the Artist',
       category: 'Learning',
     },
   ],

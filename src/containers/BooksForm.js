@@ -15,7 +15,7 @@ const BooksForm = () => (
         <input
           type="text"
           id="book-title"
-          placeholder="Book Title"
+          placeholder="Enter Book Title"
           required
         />
       </label>

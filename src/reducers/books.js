@@ -5,11 +5,7 @@ const bookReducer = (state = [], action) => {
     case CREATE_BOOK:
       return [
         ...state,
-        {
-          id: action.book.id,
-          title: action.book.title,
-          category: action.category,
-        },
+        action.book,
       ];
 
     case REMOVE_BOOK:
