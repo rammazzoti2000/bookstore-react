@@ -54,7 +54,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
   In this project it was required to build a very simple BookStore application using React and Redux. The project was split into multiple milestones, and each milestone had functional and technical requirements that needed to be implemented.
-  > screenshot to be added
   ![screenshot](src/readmePics/screenshot.png)
 
 ### Built With
