@@ -349,6 +349,9 @@ code {
 }
 
 @media only screen and (max-width: 576px) {
+  #root {
+    padding: 0;
+  }
   header {
     flex-flow: column-reverse !important;
     padding: 20px 0 30px !important;
