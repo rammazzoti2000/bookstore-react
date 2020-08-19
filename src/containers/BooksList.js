@@ -68,9 +68,13 @@ const mapDispatchToProps = dispatch => ({
   changeFilter: book => dispatch(changeFilter(book)),
 });
 
+BooksList.defaultProps = {
+  filter: 'All',
+};
+
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Object).isRequired,
-  filter: PropTypes.string.isRequired,
+  filter: PropTypes.string,
   removeBook: PropTypes.instanceOf(Function).isRequired,
   changeFilter: PropTypes.func.isRequired,
 };
