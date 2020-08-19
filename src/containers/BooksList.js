@@ -31,9 +31,20 @@ class BooksList extends React.Component {
     const filteredBooks = (filter !== 'All') ? books.filter(book => book.category === filter) : books;
     return (
       <div className="book-container">
-        <div>
-          <CategoryFilter handleChange={this.handleFilterChange} />
-        </div>
+        <header>
+          <div className="title">
+            <h1>
+              Bookstore CMS
+              <span className="books">Books</span>
+            </h1>
+            <div className="categories">
+              <CategoryFilter handleChange={this.handleFilterChange} />
+            </div>
+          </div>
+          <div className="imgHeader">
+            <img src="#" alt="logo" />
+          </div>
+        </header>
         <table>
           <thead>
             <tr>

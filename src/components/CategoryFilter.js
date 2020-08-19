@@ -12,7 +12,7 @@ const dropdownMenu = categories.map(category => (
 const CategoryFilter = ({ handleChange }) => (
   <div>
     <select name="category" onChange={event => handleChange(event)}>
-      <option value="All">All</option>
+      <option value="All">Categories</option>
       { dropdownMenu }
     </select>
   </div>
