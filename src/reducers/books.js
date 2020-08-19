@@ -1,6 +1,6 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
-const bookReducer = (state = [], action) => {
+const bookStore = (state = [], action) => {
   switch (action.type) {
     case CREATE_BOOK:
       return [
@@ -10,8 +10,8 @@ const bookReducer = (state = [], action) => {
 
     case REMOVE_BOOK:
       return [
-        ...state.slice(0, action.book.index),
-        ...state.slice(action.book.index + 1, state.length),
+        ...state.slice(0, action.book),
+        ...state.slice(action.book + 1, state.length),
       ];
 
     default:
@@ -19,4 +19,4 @@ const bookReducer = (state = [], action) => {
   }
 };
 
-export default bookReducer;
+export default bookStore;
