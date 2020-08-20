@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import sampleBookObj from './sampleBookObject';
 import books from './reducers/index';
-import './index.css';
+import './styles/index.scss';
 
 const store = createStore(books, sampleBookObj);
 
