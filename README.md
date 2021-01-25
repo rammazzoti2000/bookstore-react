@@ -119,6 +119,12 @@ The project has been deployed with [Heroku Buildpack for create-react-app](https
 - GitHub: [@rammazzoti2000](https://github.com/rammazzoti2000)
 - E-mail: bangau.alexandru@gmail.com
 
+👤 **Adam Abderrahmane Allalou**
+
+- LinkedIn: [Adam Abderrahmane Allalou](https://www.linkedin.com/in/adam-allalou/)
+- GitHub: [@adamclasic](https://github.com/adamclasic)
+- E-mail: aabou9@gmail.com
+
 ## :handshake: Contributing
 
 Contributions, issues and feature requests are welcome!
